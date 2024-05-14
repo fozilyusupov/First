@@ -1,0 +1,24 @@
+{{>layouts/header}}
+
+<table class="table table-striped">
+    <thead>
+    <tr  class="table-info">
+        <th scope="col">Id</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#product}}
+    <tr class="table-info">
+
+        <td>{{id}}</td>
+        <td> <a href="/product/{{id}}" >{{productname}}</a></td>
+        <td>{{productprice}}</td>
+    </tr>
+    {{/product}}
+    </tbody>
+
+</table>
+<a href="/product/new" class="btn btn-primary">New Product</a>
+{{>layouts/footer}}

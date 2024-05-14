@@ -1,0 +1,21 @@
+{{>layouts/header}}
+
+{{#product}}
+
+<form class="container" action="/product/edit" method="post" >
+    <div class="mb-3">
+        <input type="hidden" name="id" value="{{id}}">
+        <label  class="form-label">Title</label>
+        <input type="text" class="form-control" name="productname" value="{{productname}}">
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">Content</label>
+        <input type="number" class="form-control"   name="productprice" value="{{productprice}}"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Edit</button>
+
+
+</form>
+{{/product}}
+
+{{>layouts/footer}}

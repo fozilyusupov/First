@@ -1,0 +1,25 @@
+{{>layouts/header}}
+<table class="table table-striped">
+    <thead>
+    <tr  class="table-info">
+        <th scope="col">Id</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#product}}
+        <tr class="table-info">
+
+            <td>{{id}}</td>
+            <td>{{productname}}</td>
+            <td>{{productprice}}</td>
+        </tr>
+    {{/product}}
+    </tbody>
+</table>
+<a href="/product/delete/{{product.id}}" class="btn btn-danger">Delete Product</a>
+<a href="/product/edit/{{product.id}}" class="btn btn-primary">Edit</a>
+
+
+{{>layouts/footer}}
